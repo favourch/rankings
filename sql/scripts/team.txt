@@ -1,0 +1,120 @@
+Clemson
+Boston College
+Florida State
+Wake Forest
+North Carolina State
+Maryland
+Georgia Tech
+Virginia Tech
+Miami (FL)
+North Carolina
+Duke
+Virginia
+Nebraska
+Missouri
+Kansas State
+Iowa State
+Colorado
+Kansas
+Texas
+Oklahoma State
+Texas Tech
+Oklahoma
+Texas A&M
+Baylor
+Cincinnati
+Pittsburgh
+West Virginia
+Rutgers
+Connecticut
+South Florida
+Louisville
+Syracuse
+Ohio State
+Iowa
+Penn State
+Northwestern
+Wisconsin
+Michigan State
+Purdue
+Minnesota
+Illinois
+Michigan
+Indiana
+East Carolina
+UCF
+Southern Miss
+Marshall
+UAB
+Memphis
+Houston
+Southern Methodist
+Tulsa
+UTEP
+Rice
+Tulane
+Navy
+Notre Dame
+Army
+Ohio
+Temple
+Bowling Green
+Kent State
+Buffalo
+Akron
+Miami (OH)
+Central Michigan
+Northern Illinois
+Western Michigan
+Toledo
+Ball State
+Eastern Michigan
+TCU
+Brigham Young
+Utah
+Air Force
+Wyoming
+UNLV
+San Diego State
+New Mexico
+Colorado State
+Oregon
+Arizona
+Oregon State
+Stanford
+USC
+California
+Washington
+UCLA
+Arizona State
+Washington State
+Florida
+Georgia
+Tennessee
+Kentucky
+South Carolina
+Vanderbilt
+Alabama
+LSU
+Mississippi
+Arkansas
+Auburn
+Mississippi State
+Troy
+Middle Tennessee
+Louisiana-Monroe
+Florida Atlantic
+Louisiana-Lafayette
+Arkansas State
+FIU
+North Texas
+Western Kentucky
+Boise State
+Nevada
+Fresno State
+Idaho
+Hawaii
+Louisiana Tech
+Utah State
+New Mexico State
+San Jose State
