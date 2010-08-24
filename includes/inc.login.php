@@ -12,7 +12,8 @@ if(isset($_POST['user_login']))
 	{
 		$dm->session()->setMessage('login_error', 'Invalid username or password');
 	}
-	$dm->redirect(substr($_SERVER['REQUEST_URI'], 1));
+	header('Location: '.$_SERVER['REQUEST_URI'], 1);
+	exit();
 }
 
 if($dm->session()->loggedIn())

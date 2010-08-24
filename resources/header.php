@@ -19,7 +19,7 @@
 	<table border="0" cellpadding="0" cellspacing="0" width="100%">
 		<tr>
 			<td align="left" width="40%">
-				You are logged in as <?php echo $dm->session()->getData('username'); ?>. <a href="logout.php?u=<?php echo urlencode(substr($_SERVER['REQUEST_URI'], 1)); ?>">Logout</a>
+				You are logged in as <?php echo $dm->session()->getData('username'); ?>. <a href="logout.php?u=<?php echo urlencode($_SERVER['REQUEST_URI']); ?>">Logout</a>
 			</td>
 			<td align="center" width="28%">
 <?php include('admin_toolbar.php'); ?>

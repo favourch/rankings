@@ -4,5 +4,6 @@ include('config.php');
 
 $dm->session()->logout();
 
-$dm->redirect($_GET['u']);
+header('Location: '.$_GET['u']);
+exit();
 
