@@ -6,5 +6,10 @@ class Year extends BaseYear
 	{
 		parent::__construct($object);
 	}
+
+	function getLast()
+	{
+		return end($this->findAll("$this->__idField desc", 1));
+	}
 }
 

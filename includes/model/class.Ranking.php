@@ -7,9 +7,25 @@ class Ranking extends BaseRanking
 		parent::__construct($object);
 	}
 
+	function getLast()
+	{
+		return $this->lookup(-1);
+	}
+
 	function lookup($weekId=null)
 	{
+		global $dm;
 		$weekId = intval($weekId);
+		if($weekId == -1)
+		{
+			if($year = $dm->Year()->getLast())
+			{
+				if($week = $dm->Week()->getLast($year->yearId))
+				{
+					$weekId = $week->weekId;
+				}
+			}
+		}
 		if($weekId)
 		{
 			$sql = "select r.*, t.teamName from $this->__tableName r left join team t using(teamId) where r.weekId=$weekId order by r.points desc, r.firstPlace desc, t.teamName asc";
