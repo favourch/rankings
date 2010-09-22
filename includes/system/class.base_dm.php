@@ -1,7 +1,11 @@
 <?php
 
+define('DATA_MODELER_VERSION', '1.4.1');
+
 class base_dm extends util
 {
+	protected $dmVersion;
+
 	protected $dbInfo;
 	protected $db;
 
@@ -16,6 +20,8 @@ class base_dm extends util
 
 	function base_dm($connect=true)
 	{
+		$this->dmVersion = DATA_MODELER_VERSION;
+
 		if($connect)
 		{
 			$this->connectDb();
