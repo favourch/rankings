@@ -5,13 +5,13 @@ require_once dirname(__FILE__).'/includes/system/config.php';
 // classes
 $dbInfo = new dbInfo();
 $dbInfo->setHost('localhost');
-$dbInfo->setUser('root');
-$dbInfo->setPass('');
+$dbInfo->setUser('www-data');
+$dbInfo->setPass('W3Wd@ta');
 $dbInfo->setName('rankings');
 
 $dm = new dm(false);
 $dm->connectDb($dbInfo);
-$dm->setVars('Rankings', 'http://vm.rankings/', '/home/jon/www/misc/rankings/');
+$dm->setVars('Rankings', 'http://stoddart.rankings/', '/usr/local/www/data/rankings/');
 
 include('includes/inc.login.php');
 
