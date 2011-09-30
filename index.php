@@ -54,7 +54,7 @@ $ranking = $dm->Ranking()->getLast();
 			<td width="50">
 			</td>
 			<td>
-				User Rankings
+				User Rankings | <a href="week.php?y=<?php echo $year->yearId; ?>&w=<?php echo $week->weekId; ?>&u=all">All Users</a>
 <?php 	foreach($dm->Vote()->findUsersByWeek($week->weekId) as $user) : ?>
 <?php 		if(isset($_GET['u']) && $user->userId == $_GET['u']) : ?>
 				| <b><a href="?y=<?php echo $year->yearId; ?>&w=<?php echo $week->weekId; ?>&u=<?php echo $user->userId; ?>"><?php echo $user->displayName; ?></a></b>

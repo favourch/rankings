@@ -11,7 +11,7 @@ $dbInfo->setName('rankings');
 
 $dm = new dm(false);
 $dm->connectDb($dbInfo);
-$dm->setVars('Rankings', 'http://stoddart.rankings/', '/usr/local/www/data/rankings/');
+$dm->setVars('Rankings', 'http://rankings.stoddarthome.com/', '/usr/local/www/data/rankings/');
 
 include('includes/inc.login.php');
 

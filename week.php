@@ -68,6 +68,11 @@ include($dm->headerFile());
 			</td>
 			<td>
 				User Rankings
+<?php 	if(isset($_GET['u']) && 'all' == $_GET['u']) : ?>
+				| <b><a href="week.php?y=<?php echo $year->yearId; ?>&w=<?php echo $week->weekId; ?>&u=all">All Users</a></b>
+<?php 	else : ?>
+				| <a href="week.php?y=<?php echo $year->yearId; ?>&w=<?php echo $week->weekId; ?>&u=all">All Users</a>
+<?php 	endif; ?>
 <?php 	foreach($dm->Vote()->findUsersByWeek($week->weekId) as $user) : ?>
 <?php 		if(isset($_GET['u']) && $user->userId == $_GET['u']) : ?>
 				| <b><a href="?y=<?php echo $year->yearId; ?>&w=<?php echo $week->weekId; ?>&u=<?php echo $user->userId; ?>"><?php echo $user->displayName; ?></a></b>
@@ -76,7 +81,24 @@ include($dm->headerFile());
 <?php 		endif; ?>
 <?php 	endforeach; ?>
 				<br />
-<?php 		if(isset($_GET['u'])) : $num = 1; $vote = $dm->Vote()->findVoteByWeekAndUser($week->weekId, $_GET['u']); ?>
+<?php 		if(isset($_GET['u']) && $_GET['u'] == 'all') : $user = array(); ?>
+				<table class="rows" cellspacing="0">
+					<tr class="header">
+<?php 			foreach($dm->Vote()->findUsersByWeek($week->weekId) as $user) : ?>
+<?php 				$votes[$user->userId] = $dm->Vote()->findVoteByWeekAndUser($week->weekId, $user->userId); ?>
+						<td colspan="2" class="border-right"><?php echo $user->displayName; ?></td>
+<?php 			endforeach; ?>
+					</tr>
+<?php 			for($i=0; $i<25; $i++) : ?>
+					<tr class="row<?php echo ($i + 1) % 2 + 1; ?>">
+<?php 				foreach($votes as $v) : ?>
+						<td class="number"><?php echo $i + 1; ?></td>
+						<td class="border-right"><?php echo $v[$i]->teamName; ?></td>
+<?php 				endforeach; ?>
+					</tr>
+<?php 			endfor; ?>
+				</table>
+<?php 		elseif(isset($_GET['u'])) : $num = 1; $vote = $dm->Vote()->findVoteByWeekAndUser($week->weekId, $_GET['u']); ?>
 				<br />
 				<table class="rows" cellspacing="0">
 <?php 			foreach($vote as $v) : ?>
