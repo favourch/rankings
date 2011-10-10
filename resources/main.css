@@ -52,7 +52,7 @@ a {
 	background: #ffffff;
 	text-align: left;
 	width: 700px;
-	height: 100%;
+	min-height: 100%;
 	border-left: 1px solid #333333;
 	border-right: 1px solid #333333;
 }
