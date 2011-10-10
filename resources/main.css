@@ -3,6 +3,12 @@ body, html, td, div, span, input, select {
 	color: #000000;
 }
 
+body, html {
+	margin: 0px;
+	padding: 0px;
+	background: #f4f4f4;
+}
+
 h1 {
 	font-size: 20px;
 	font-weight: bold;
@@ -42,9 +48,26 @@ a {
 	color: #cc0000;
 }
 
-#content {
-	width: 800px;
+#wrapper {
+	background: #ffffff;
 	text-align: left;
+	width: 700px;
+	height: 100%;
+	border-left: 1px solid #333333;
+	border-right: 1px solid #333333;
+}
+
+#content {
+	width: 690px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+}
+
+#navigation {
+	background: #f4f4f4;
+	padding: 10px;
+	border-bottom: 1px solid #333333;
 }
 
 /** ROWS **/

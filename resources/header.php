@@ -14,7 +14,8 @@
 </head>
 <body>
 <center>
-<div id="content">
+<div id="wrapper">
+<div id="navigation">
 <?php if($dm->session()->loggedIn()) : ?>
 	<table border="0" cellpadding="0" cellspacing="0" width="100%">
 		<tr>
@@ -48,4 +49,6 @@
 		</tr>
 	</table>
 <?php endif; ?>
+</div>
+<div id="content">
 
